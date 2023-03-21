@@ -1,0 +1,17 @@
+{
+  "name": "yakweide-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.15.0",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  }
+}

@@ -1,0 +1,12 @@
+# JetBrains WebStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# .env
+.env
+.env.*
+
+#node
+/node_modules/
