@@ -73,9 +73,6 @@ async function filterLogs(array_logs){
         if (log.targetType !== 'User') return;
         //26 = Update, 27 = Delete
         if (log.action !== 26 && log.action !== 27) return;
-        //Filter for Voice Channel
-        if (!(log.extra.channel) || log.extra.channel.type !== 2) return;
-
         filtered_logs.push(log);
     });
 
@@ -109,7 +106,7 @@ async function printLogs(different_logs) {
         //let message = log.executor.username;
         let message = "<@"+ log.executor.id +">"
         if (log.action === 26) message += " moved a user to " + log.extra.channel.name + "!";
-        //if (log.action === 27) message += " disconnected a user!";
+        if (log.action === 27) message += " disconnected a user!";
         logChannel.send(message);
         console.log(message);
     });
