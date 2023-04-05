@@ -103,8 +103,8 @@ async function calculateDifferences(filtered_logs){
 
 async function printLogs(different_logs) {
     different_logs.forEach(log => {
-        //let message = log.executor.username;
-        let message = "<@"+ log.executor.id +">"
+        let message = log.executor.username;
+        //let message = "<@"+ log.executor.id +">"
         if (log.action === 26) message += " moved a user to " + log.extra.channel.name + "!";
         if (log.action === 27) message += " disconnected a user!";
         logChannel.send(message);
