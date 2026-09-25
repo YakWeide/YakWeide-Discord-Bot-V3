@@ -4,15 +4,25 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\" \"eslint.config.js\" \"package.json\"",
+    "check:syntax": "node --check src/index.js && node --check src/audit-log.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/voice": "^0.15.0",
-    "discord.js": "^14.8.0",
-    "dotenv": "^16.0.3",
-    "moment-timezone": "^0.5.41"
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.9"
+  },
+  "engines": {
+    "node": ">=24.17.0"
   }
 }
